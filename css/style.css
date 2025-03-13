@@ -81,7 +81,7 @@ body {
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
-    min-height: 100vh;
+    min-height: 100vh; 
 }
 .header__top {
     padding: 50px 0 90px;
@@ -491,4 +491,47 @@ body {
     display: flex;
     font-size: 16px;
     gap: 40px;
+}
+.menu__btn {
+    display: none;
+    width: 40px;
+    height: 40px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+.menu__btn span {
+    width: 100%;
+    height: 4px;
+    background-color: #0a507a;
+}
+.menu.menu--open{
+    transform: translateY(0%);
+}
+
+@media (max-width: 992px) {
+    .menu__btn {
+        display: flex;
+   }
+
+    .menu__list {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #0a507a;
+        color: #fff;
+        flex-direction: column;
+        justify-content: baseline ;
+        align-items: center;
+        font-size: 24px;
+        transform: translateY(-100%);
+    }
+    .menu__list li{
+        padding: 5vh;
+    }
 }
