@@ -81,7 +81,7 @@ body {
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
-    min-height: 100vh; 
+    min-height: 100vh;
 }
 .header__top {
     padding: 50px 0 90px;
@@ -145,7 +145,7 @@ body {
     border-radius: 30px;
     border: 1px solid #0a507a;
     background: rgba(255, 255, 255, 0.2);
-   
+
     padding: 10px 20px;
     color: #0a507a;
     font-size: 26px;
@@ -359,6 +359,7 @@ body {
 .activities__inner {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
 }
 .activities__item {
     display: flex;
@@ -502,7 +503,7 @@ body {
     border: none;
     background-color: transparent;
     padding: 0;
-    
+
     position: relative;
     z-index: 1;
 }
@@ -510,45 +511,52 @@ body {
     width: 100%;
     height: 4px;
     background-color: #0a507a;
-    transition: background-color .3s ease;
+    transition: background-color 0.3s ease;
 }
-.menu.menu--open .menu__list{
+.menu.menu--open .menu__list {
     transform: translateY(0%);
 }
-.menu.menu--open .menu__btn span{
-  background-color: #fff;
+.menu.menu--open .menu__btn span {
+    background-color: #fff;
 }
-.about__inner{
-  gap: 20px;
+.about__inner {
+    gap: 20px;
 }
 @media (max-width: 1500px) {
-  .about__img{
-    flex-basis: 50%;
-  }
-  
-
-
+    .about__img {
+        flex-basis: 50%;
+    }
+    .about__img img {
+        width: 100%;
+    }
 }
 
-
-
 @media (max-width: 1280px) {
-  .about__title{
-    margin-bottom: 20px;
-  }
-  .about__content{
-    flex-basis: 50%;
-  }
-  .about__img{
-    align-self: flex-end;
-  }
-
+    .about__title {
+        margin-bottom: 20px;
+    }
+    .about__content {
+        flex-basis: 50%;
+    }
+    .about__img {
+        align-self: flex-end;
+    }
+    .about__list {
+        margin-bottom: 10px;
+    }
+    .about__content {
+        flex-basis: 50%;
+    }
+    .reviews__top {
+        margin-left: 0;
+        margin-bottom: 75px;
+    }
 }
 
 @media (max-width: 992px) {
     .menu__btn {
         display: flex;
-   }
+    }
 
     .menu__list {
         position: absolute;
@@ -559,49 +567,168 @@ body {
         background-color: #0a507a;
         color: #fff;
         flex-direction: column;
-        justify-content: baseline ;
+        justify-content: baseline;
         align-items: center;
         font-size: 24px;
         transform: translateY(-100%);
-        transition: transform .3s ease;
+        transition: transform 0.3s ease;
     }
-    .menu__list li{
+    .menu__list li {
         padding: 5vh;
     }
-    .header__news{
-      margin-top: 10px;
-      order: -1;
-      margin-bottom: 30px;
+    .header__news {
+        margin-top: 10px;
+        order: -1;
+        margin-bottom: 30px;
     }
-    .header__content{
-      flex-direction: column;
+    .header__content {
+        flex-direction: column;
     }
-    .header__info-list{
-      max-width: 100%;
+    .header__info-list {
+        max-width: 100%;
     }
-    .header__info{
-      gap: 50px;
+    .header__info {
+        gap: 50px;
     }
-    .text{
-      font-size: 40px;
-      padding: 75px 0;
+    .text {
+        font-size: 40px;
+        padding: 75px 0;
+    }
+    .about__title {
+        font-size: 40px;
+    }
+    .about__inner {
+        flex-wrap: wrap;
+    }
+    .about__content {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    .about__img {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    .about,
+    .site-images {
+        margin-bottom: 75px;
+    }
+    .activities__info {
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+    }
+    .activities__title,
+    .activities__text {
+        flex-basis: 100%;
+    }
+    .activities__title {
+        font-size: 40px;
+    }
+    .activities__text-blok {
+        margin-bottom: 10px;
+    }
+    .reviews__items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .reviews__item:nth-child(even) {
+        padding-top: 0px;
+    }
+    .reviews__img {
+        max-width: 100%;
+    }
+    .reviews__title {
+        font-size: 44px;
+    }
+}
+@media (max-width: 800px) {
+    .activities__inner {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .footer {
+        padding: 75px 0;
+    }
+    .footer__title {
+        font-size: 44px;
+    }
+    .footer__bottom {
+        flex-wrap: wrap;
+    }
+    .footer__info {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footer__nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .header__social-list {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 570px) {
+    .footer__top {
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+    .footer__title {
+        order: 1;
+        text-align: center;
     }
 }
 @media (max-width: 480px) {
-  .header__buttons-activities, .header__buttons-book{
-    font-size: 24px;
-    width: 100%;
-    text-align: center;
-  }
-  .header__buttons{
-    flex-wrap: wrap;
-    row-gap: 10px;
-  }
-  .header__info-item{
-    font-size: 14px;
-  }
-  .header__info-list{
-    gap: 10px;
-  }
-
+    .header__buttons-activities,
+    .header__buttons-book {
+        font-size: 24px;
+        width: 100%;
+        text-align: center;
+    }
+    .header__buttons {
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+    .header__info-item,
+    .about__item {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    .header__info-list {
+        gap: 10px;
+    }
+    .about {
+        padding-bottom: 0;
+        margin-bottom: 50px;
+    }
+    .about__subtitle {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+    .reviews__subtitle {
+        font-size: 10px;
+    }
+    .activities__inner {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .activities {
+        margin-bottom: 50px;
+    }
+    .site-images {
+        display: none;
+    }
+    .activities__title {
+        font-size: 34px;
+    }
+    .reviews__top {
+        margin-bottom: 30px;
+    }
+    .reviews__items {
+        grid-template-columns: 1fr;
+    }
+    .reviews {
+        margin-bottom: 50px;
+    }
 }
